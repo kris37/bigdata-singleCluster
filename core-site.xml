@@ -19,7 +19,7 @@
 <configuration>
      <property>
         <name>qyer-hadoop</name>
-        <value>localhost</value>
+        <value>192.168.65.2</value>
     </property>
 	 <!--客户端连接HDFS时，默认的路径前缀-->
     <property>
