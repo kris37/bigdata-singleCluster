@@ -44,6 +44,8 @@ done
 # The maximum amount of heap to use, in MB. Default is 1000.
 #export HADOOP_HEAPSIZE=
 #export HADOOP_NAMENODE_INIT_HEAPSIZE=""
+export HADOOP_HEAPSIZE=1024
+export HADOOP_NAMENODE_OPTS="-Xms1g -Xmx10g"
 
 # Extra Java runtime options.  Empty by default.
 export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true"
