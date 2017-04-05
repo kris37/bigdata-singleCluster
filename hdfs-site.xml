@@ -36,9 +36,7 @@
     <!--name node的上持久化存储元数据和事务日志的路径。,以,号隔开,hdfs会把元数据冗余复制到这些目录，一般这些目录是不同的块设备-->
     <property>
         <name>dfs.namenode.name.dir</name>
-        <value>
-            /hdd1/hdfs/nn/
-        </value>
+        <value>/hdd1/hdfs/nn/</value>
     </property>
     <!--node node的事务文件存储的目录,以,号隔开,hdfs会把事务文件冗余复制到这些目录，一般这些目录是不同的块设备-->
     <property>
@@ -58,9 +56,7 @@
 
     <property>
         <name>dfs.datanode.data.dir</name>
-        <value>
-            /hdd1/hdfs/dn/
-        </value>
+        <value>/hdd1/hdfs/dn/</value>
     </property>
 
     <property>
@@ -80,7 +76,7 @@
     <!-- 坏1块盘,datanode才会stop -->
     <property>
         <name>dfs.datanode.failed.volumes.tolerated</name>
-        <value>1</value>
+        <value>0</value>
     </property>
 
     <!--secondary ／checkpoint node settings-->
@@ -93,12 +89,12 @@
      
  	<property>
         <name>hadoop.tmp.dir</name>
-        <value>/hdd1/hdfs/tmp</value>
+        <value>/hdd1/hdfs/tmp/</value>
     </property>
 
      <property>
   		<name>dfs.namenode.checkpoint.dir</name>
-  		<value>file://${hadoop.tmp.dir}/dfs/namesecondary</value>
+  		<value>${hadoop.tmp.dir}/dfs/namesecondary</value>
 	</property>
 
 <property>
@@ -108,7 +104,16 @@
       name node should store the temporary edits to merge.
   </description>
 </property>
+<!--checkpoint and master httpservice-->
+<property>
+  <name>dfs.namenode.backup.address</name>
+  <value>172.17.0.3:50090</value>
+</property>
 
+<property>
+  <name>dfs.http.address</name>
+  <value>172.17.0.2:50070</value>
+</property>
 
 
 </configuration>
