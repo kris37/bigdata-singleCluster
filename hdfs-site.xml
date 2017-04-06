@@ -118,6 +118,13 @@
   <name>dfs.http.address</name>
   <value>172.17.0.2:50070</value>
 </property>
-
+<property>
+   <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+   <value>false</value>
+</property>
+<property>
+<name>yarn.resourcemanager.hostname</name>
+<value>172.17.0.2</value>
+</property>
 
 </configuration>
