@@ -40,12 +40,12 @@
      <!-- 一个container最小申请的内存 此处设置1G-->
     <property>
         <name>yarn.scheduler.minimum-allocation-mb</name>
-        <value>50</value>
+        <value>100</value>
     </property>
      <!-- 一个container最大申请的内存,此处设置56G内存,体现在spark上executor最好设置成48G-->
     <property>
         <name>yarn.scheduler.maximum-allocation-mb</name>
-        <value>256</value>
+        <value>128</value>
     </property>
         <!--CPU资源-->
     <property>
@@ -55,12 +55,12 @@
     <!--最大占据一半的cpu-->
     <property>
         <name>yarn.scheduler.maximum-allocation-vcores</name>
-        <value>2</value>
+        <value>1</value>
     </property>
       <!-- NodeManager提供的最大内存 此处设置240内存,机器的内存是256G内存-->
     <property>
         <name>yarn.nodemanager.resource.memory-mb</name>
-        <value>1024</value>
+        <value>256</value>
     </property>
 
  <!-- 虚拟内存和物理内存的比重 -->
@@ -71,7 +71,7 @@
     <!--机器的cpu是40核,我们用32核-->
     <property>
         <name>yarn.nodemanager.resource.cpu-vcores</name>
-        <value>2</value>
+        <value>1</value>
     </property>
 
      <property>
