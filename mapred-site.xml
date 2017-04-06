@@ -26,9 +26,11 @@
         <name>mapreduce.map.output.compress</name>
         <value>true</value>
     </property>
+    <!--mid compress format Snaappy ==> lzo-->
     <property>
         <name>mapred.map.output.compress.codec</name>
-        <value>org.apache.hadoop.io.compress.SnappyCodec</value>
+        <!--<value>org.apache.hadoop.io.compress.SnappyCodec</value>-->
+        <value>com.hadoop.compression.lzo.LzoCodec</value>
     </property>
 
      <!-- map占的资源-->

@@ -47,6 +47,10 @@
             com.hadoop.compression.lzo.LzopCodec
         </value>
     </property>
+    <property> 
+         <name>io.compression.codec.lzo.class</name> 
+         <value>com.hadoop.compression.lzo.LzoCodec</value> 
+    </property> 
     <!-- trash time 7days-->
     <property>
         <name>fs.trash.interval</name>
