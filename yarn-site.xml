@@ -37,7 +37,7 @@
         <name>yarn.resourcemanager.recovery.enabled</name>
         <value>false</value>
     </property>
-    <!--testing setting in docker 2 nodes ,each node max memory is totaol 3g(os reserved=1GB usableMem=2GB) ,cup is 2cores->
+    <!--testing setting in docker 2 nodes ,each node max memory is totaol 3g(os reserved=1GB usableMem=2GB) ,cup is 2cores-->
      <!-- 一个container最小申请的内存 此处设置1G-->
     <property>
         <name>yarn.scheduler.minimum-allocation-mb</name>
