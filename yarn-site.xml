@@ -37,15 +37,16 @@
         <name>yarn.resourcemanager.recovery.enabled</name>
         <value>false</value>
     </property>
+    <!--testing setting in docker 2 nodes ,each node max memory is totaol 3g(os reserved=1GB usableMem=2GB) ,cup is 2cores->
      <!-- 一个container最小申请的内存 此处设置1G-->
     <property>
         <name>yarn.scheduler.minimum-allocation-mb</name>
-        <value>790</value>
+        <value>682</value>
     </property>
      <!-- 一个container最大申请的内存,此处设置56G内存,体现在spark上executor最好设置成48G-->
     <property>
         <name>yarn.scheduler.maximum-allocation-mb</name>
-        <value>2000</value>
+        <value>2046</value>
     </property>
         <!--CPU资源-->
     <property>
@@ -55,7 +56,7 @@
     <!--最大占据一半的cpu-->
     <property>
         <name>yarn.scheduler.maximum-allocation-vcores</name>
-        <value>1</value>
+        <value>2</value>
     </property>
       <!-- NodeManager提供的最大内存 此处设置240内存,机器的内存是256G内存-->
     <property>
@@ -71,7 +72,7 @@
     <!--机器的cpu是40核,我们用32核-->
     <property>
         <name>yarn.nodemanager.resource.cpu-vcores</name>
-        <value>1</value>
+        <value>2</value>
     </property>
 
      <property>
@@ -83,7 +84,7 @@
     <property>
         <name>yarn.nodemanager.log-dirs</name>
         <value>
-            /hdd1/yarn/userlogs/
+            /hdd1/yarn/user/logs/
         </value>
     </property>
 

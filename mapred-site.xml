@@ -33,53 +33,68 @@
         <value>com.hadoop.compression.lzo.LzoCodec</value>
     </property>
 
+    <property>
+        <name>gc.path</name>
+        <value>${hadoop.tmp.dir}</value>
+    </property>
+
      <!-- map占的资源-->
     <property>
         <name>mapreduce.map.memory.mb</name>
-        <value>100</value>
+        <value>682</value>
     </property>
 
     <property>
         <name>mapreduce.map.cpu.vcores</name>
         <value>1</value>
     </property>
-
+    <!--map -->
     <!-- reduce占的资源-->
     <property>
         <name>mapreduce.reduce.memory.mb</name>
-        <value>100</value>
+        <value>1364</value>
     </property>
 
     <property>
         <name>mapreduce.reduce.cpu.vcores</name>
         <value>1</value>
     </property>
-
     <property>
-        <name>gc.path</name>
-        <value>${hadoop.tmp.dir}</value>
+        <name>mapreduce.map.java.opts</name>
+        <value>-Xmx1091m -verbose:gc -Xloggc:${gc.path}/reduce-%t.gc</value>
     </property>
-
-     <!--启动jvm的参数-->
+     <!--启动jvm的参数,this setting is expired, map/reduce set mapreduce.map/reduce.java.opts -->
+     <!--
     <property>
         <name>mapred.child.java.opts</name>
         <value>-Xmx200m -verbose:gc -Xloggc:${gc.path}/mr-%t.gc</value>
     </property>
-     <!-- am的内存,默认为6G -->
+    -->
+    <property>
+        <name>mapreduce.map.java.opts</name>
+        <value>-Xmx545m -verbose:gc -Xloggc:${gc.path}/map-%t.gc</value>
+    </property>
+
+    <!--io sort mb-->
+     <property>
+        <name>mapreduce.task.io.sort.mb</name>
+        <value>272</value>
+    </property>
+
+     <!-- am的内存,默认为6G，包括cup cores 等等这个数值在测试或者小集群中 设置的数值要大于map/reduce的内存mb,以便开启uber模式 -->
     <property>
         <name>yarn.app.mapreduce.am.resource.mb</name>
-        <value>128</value>
+        <value>1364</value>
     </property>
-    <!-- 启动am进程的内存为5G -->
+    <!-- 启动am进程的内存为5G,AP master jvm opts -->
     <property>
         <name>yarn.app.mapreduce.am.command-opts</name>
-        <value>-Xmx128m -verbose:gc -Xloggc:${gc.path}/am-%t.gc</value>
+        <value>-Xmx1091m -verbose:gc -Xloggc:${gc.path}/am-%t.gc</value>
     </property>
     <property>
         <name>yarn.app.mapreduce.am.resource.cpu-vcores</name>
         <value>1</value>
     </property>
-
 
     <!--map/reduce的中间结果保存路径-->
     <property>
@@ -88,8 +103,7 @@
             /hdd1/yarn/mapred/local/
         </value>
     </property>
-
-
+<!--默认执行队列-->
     <property>
         <name>mapreduce.job.queuename</name>
         <value>default</value>
@@ -118,5 +132,4 @@
         <name>mapred.child.env</name>
         <value>LD_LIBRARY_PATH=/opt/hadoop/lib/native</value>
     </property>
-
 </configuration>
