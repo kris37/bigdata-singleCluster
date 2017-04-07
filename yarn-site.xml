@@ -67,7 +67,7 @@
  <!-- 虚拟内存和物理内存的比重 -->
     <property>
         <name>yarn.nodemanager.vmem-pmem-ratio</name>
-        <value>2.1</value>
+        <value>2.7</value>
     </property>
     <!--机器的cpu是40核,我们用32核-->
     <property>
