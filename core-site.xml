@@ -29,7 +29,7 @@
      <!--A base for other temporary directories.-->
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>/hdd1/hdfs/tmp/</value>
+        <value>/hdd1/hadoop/tmp</value>
     </property>
     <property>
         <name>io.file.buffer.size</name>
@@ -97,8 +97,5 @@
         <value>org.apache.hadoop.hdfs.HftpFileSystem</value>
         <description>The FileSystem for hftp: uris.</description>
     </property>
-    <property>
-        <name>dfs.namenode.checkpoint.dir</name>
-        <value>${hadoop.tmp.dir}/dfs/namesecondary</value>
-    </property>
+  
 </configuration>
