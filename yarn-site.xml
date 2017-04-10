@@ -75,16 +75,18 @@
         <value>2</value>
     </property>
 
+    <!--存放application执行本地文件的根目录，执行完毕后删除，按用户名存储-->
      <property>
         <name>yarn.nodemanager.local-dirs</name>
         <value>
-            /hdd1/yarn/nn/local/
+            /hdd1/yarn/local/
         </value>
     </property>
+    <!--存放application本地执行日志的根目录，执行完毕后删除，按用户名存储-->
     <property>
         <name>yarn.nodemanager.log-dirs</name>
         <value>
-            /hdd1/yarn/user/logs/
+            /hdd1/yarn/userlogs/
         </value>
     </property>
 
@@ -94,13 +96,14 @@
         <name>yarn.log-aggregation-enable</name>
         <value>true</value>
     </property>
+    <!--hdfs store logs-->
     <property>
         <name>yarn.nodemanager.remote-app-log-dir</name>
         <value>/logs</value>
     </property>
     <property>
         <name>yarn.nodemanager.remote-app-log-dir-suffix</name>
-        <value>logs</value>
+        <value>/logs</value>
     </property>
 
     <property>
