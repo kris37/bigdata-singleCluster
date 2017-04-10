@@ -86,6 +86,10 @@
      <name>mapred.min.split.size.per.node</name>
      <value>100000000</value>
    </property>
+    <property>
+     <name>mapred.min.split.size.per.rack</name>
+     <value>100000000</value>
+   </property>
    <!--combine input format default-->
    <property>
     <name>hive.input.format</name>
