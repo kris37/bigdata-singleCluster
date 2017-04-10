@@ -92,5 +92,22 @@
     <value>org.apache.hadoop.hive.ql.io.CombineHiveInputFormat</value>
     <description>The default input format. Set this to HiveInputFormat if you encounter problems with CombineHiveInputFormat.</description>
   </property>
+  <!--hive server2-->
+   <property>
+    <name>hive.server2.thrift.http.port</name>
+    <value>10001</value>
+    <description>Port number of HiveServer2 Thrift interface when hive.server2.transport.mode is 'http'.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value/>
+    <description>Bind host on which to run the HiveServer2 Thrift service.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.port</name>
+    <value>10000</value>
+    <description>Port number of HiveServer2 Thrift interface when hive.server2.transport.mode is 'binary'.</description>
+  </property>
+
 
 </configuration>
