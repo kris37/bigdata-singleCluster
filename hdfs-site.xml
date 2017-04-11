@@ -47,11 +47,11 @@
     <!-- The number of server threads for the datanode. namenode set 20logNode datanode set cup cores 5 -->
     <property>
         <name>dfs.datanode.handler.count</name>
-        <value>5</value>
+        <value>10</value>
     </property>
     <property>
         <name>dfs.namenode.handler.count</name>
-        <value>10</value>
+        <value>20</value>
     </property>
 
     <property>
