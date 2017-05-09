@@ -61,13 +61,13 @@
       <!-- NodeManager提供的最大内存 此处设置240内存,机器的内存是256G内存-->
     <property>
         <name>yarn.nodemanager.resource.memory-mb</name>
-        <value>2048</value>
+        <value>4096</value>
     </property>
 
  <!-- 虚拟内存和物理内存的比重 -->
     <property>
         <name>yarn.nodemanager.vmem-pmem-ratio</name>
-        <value>5</value>
+        <value>7</value>
     </property>
     <!--机器的cpu是40核,我们用32核-->
     <property>
